@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Timetable</title>
+    <link rel="stylesheet" href="timetable.css">
+    <script src="timetable.js" defer></script>
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+        <div class="logo">BSCS</div>
+        <ul class="nav-links">
+            <li><a href="student-login.html">LogIn</a></li> <!-- Link to Home page -->
+            <li><a href="timetable.html">Timetable</a></li> <!-- Link to Timetable page -->
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+         
+        </ul>
+    </nav>
+    <div id="add-timetable-form">
+        <h3>Add New Timetable</h3>
+        <div id="Update-timetable-form">
+            <h3> Update Timetable</h3>
+            <form id="timetableForm" onsubmit="submitForm(event)">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+    
+                <label for="day">Day:</label>
+                <input type="text" id="day" required>
+    
+                <label for="time">Time:</label>
+                <input type="text" id="time" required>
+    
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+    
+                <label for="instructor">Instructor:</label>
+                <input type="text" id="instructor" required>
+    
+                <button type="submit" class="save-timetable-btn">Save Timetable</button>
+    
+            </form>
+        </div>
+    
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get the form data
+            const title = document.getElementById('title').value;
+            const day = document.getElementById('day').value;
+            const time = document.getElementById('time').value;
+            const location = document.getElementById('location').value;
+            const instructor = document.getElementById('instructor').value;
+
+            // Redirect to timetable.html with query parameters
+            const url = `timetable.html?title=${encodeURIComponent(title)}&day=${encodeURIComponent(day)}&time=${encodeURIComponent(time)}&location=${encodeURIComponent(location)}&instructor=${encodeURIComponent(instructor)}`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riphah International University - Home & Timetable</title>
+    <link rel="stylesheet" href="timetable.css">
+    <script src="timetable.js"></script>
+</head>
+<body>
+    <!-- Main Section for Home Page -->
+    <section class="main-content">
+        <div class="content-left">
+            <h1>Welcome to Riphah International University</h1>
+            <h2>Explore Timetables & Services</h2>
+            <p> Access staff resources and manage administrative tasks, or manage your academic journey and view your timetable effectively.</p>
+            
+            <!-- Staff Login Form -->
+        <form class="newsletter-form" onsubmit="redirectToStaffDashboard(event)">
+            <input type="number" id="staff-id" placeholder="Enter Your ID" required>
+            <input type="password" id="staff-password" placeholder="Enter Your Password" required>
+            <button type="submit">Staff Login</button>
+        </form>
+        
+    </div>
+        <div class="content-right">
+            <img src="uni.png" alt="University Campus">
+        </div>
+    </section>
+</body>
+</html>

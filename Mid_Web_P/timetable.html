@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall 2024 BSCS Timetable</title>
+    <link rel="stylesheet" href="timetable.css">
+    <script src="timetable.js"></script>
+    
+</head>
+<body>
+    <h1>Fall 2024 BSCS Timetable</h1>
+
+    <!-- Course Selection Dropdown -->
+    <label for="courseSelect">Select Course: </label>
+    <select id="courseSelect" onchange="filterTimetable()">
+        <option value="all">All</option>
+        <option value="CS-1">CS-1</option>
+        <option value="CS-2">CS-2</option>
+        <option value="CS-3">CS-3</option>
+        <option value="CS-4">CS-4</option>
+        <option value="CS-5">CS-5</option>
+        <option value="CS-6">CS-6</option>
+        <option value="CS-7">CS-7</option>
+        <option value="CS-8">CS-8</option>
+    </select>
+  <br>
+    <!-- Timetable -->
+    <table id="timetable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Location</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <!-- CS-1 Classes -->
+            <tr data-course="CS-1">
+                <td>CS-1 pre calculus-1</td>
+                <td>Tue</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-204</td>
+                <td>Sadia Lodhi</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Discrete Structure</td>
+                <td>Tue</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-204</td>
+                <td>Sadia Lodhi</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Programming Fundamentals</td>
+                <td>Fri</td>
+                <td>3:00p - 4:00p</td>
+                <td>GGC B-203</td>
+                <td>Seemab Karim</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Programming Fundamentals</td>
+                <td>Thu</td>
+                <td>11:30a - 1:30p</td>
+                <td>GGC A-004</td>
+                <td>Seemab Karim</td>
+            </tr>
+            
+            <tr data-course="CS-1">
+                <td>CS-1 Functional English</td>
+                <td>Mon</td>
+                <td>12:30p - 3:30p</td>
+                <td>GGC A-214</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Applied Physics (Lab)</td>
+                <td>Wed</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-204</td>
+                <td>Mahpara Ghanzanfar</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Introduction to information and communication technologies</td>
+                <td>Wed</td>
+                <td>11:00a - 1:00p</td>
+                <td>GGC A-206</td>
+                <td>Anum Bibi</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Programming Fundamentals (Lab)</td>
+                <td>Thu</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC B-209</td>
+                <td>Nayab Khalid</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Programming Fundamentals (Lab)</td>
+                <td>Fri</td>
+                <td>noon - 3:00p</td>
+                <td>GGC A-212</td>
+                <td>Nayab Khalid</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Applied Physics (Lab)</td>
+                <td>Fri</td>
+                <td>9:00a - noon</td>
+                <td>GGC A-213</td>
+                <td>Mahpara Ghanzanfar</td>
+            </tr>
+            <tr data-course="CS-1">
+                <td>CS-1 Introduction to information and communication technologies (Lab)</td>
+                <td>Mon</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC B-209</td>
+                <td>Nayab Khalid</td>
+            </tr>
+
+            <!-- CS-2 Classes -->
+            <tr data-course="CS-2">
+                <td>CS-2 Ideology and Constitution of Pakistan</td>
+                <td>Thu</td>
+                <td>11:00a - 1:00p</td>
+                <td>GGC A-006</td>
+                <td>Haleema Ajmal</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Calculus and Analytical Geometry</td>
+                <td>Thu</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC B-205</td>
+                <td>Tehsina Shoaib</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Digital Logic and Design</td>
+                <td>Tue</td>
+                <td>8:30a - 10:30a</td>
+                <td>GGC B-304</td>
+                <td>Tehreem Tajammal</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Object Oriented Programming</td>
+                <td>Wed</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC A-204</td>
+                <td>Mehwish Javed</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Object Oriented Programming</td>
+                <td>Thu</td>
+                <td>10:00a - 11:00a</td>
+                <td>GGC A-110</td>
+                <td>Mehwish Javed</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Expository Writing</td>
+                <td>Wed</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-206</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Pre calculus-2</td>
+                <td>Fri</td>
+                <td>8:30a - 11:30a</td>
+                <td>GGC B-305</td>
+                <td>Sadia Lodhi</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Islamic Studies</td>
+                <td>Thu</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC A-007</td>
+                <td>Fariha Fatima</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Digital Logic and Design (Lab)</td>
+                <td>Fri</td>
+                <td>noon - 3:00p</td>
+                <td>GGC B-213</td>
+                <td>Nayab Khalid</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Digital Logic and Design (Lab)</td>
+                <td>Tue</td>
+                <td>11:00a - 2:00p</td>
+                <td>GGC B-213</td>
+                <td>Nayab Khalid</td>
+            </tr>
+            <tr data-course="CS-2">
+                <td>CS-2 Object Oriented Programming (Lab)</td>
+                <td>Mon</td>
+                <td>noon - 3:00p</td>
+                <td>GGC B-213</td>
+                <td>Naveera Ahmed</td>
+            </tr>
+
+            <!-- CS-3 Classes -->
+            <tr data-course="CS-3">
+                <td>CS-3 Multivariable calculus</td>
+                <td>Thu</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC B-112</td>
+                <td>Bilal Ahmed</td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Data Structures and Algorithms</td>
+                <td>Mon</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC A-203</td>
+                <td>Anum Aleem</td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Computer Organization and Assembly Language</td>
+                <td>Wed</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC B-202</td>
+                <td>Naria Andeelab </td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Computer Organization and Assembly Language</td>
+                <td>Mon</td>
+                <td>1:00p - 2:00p</td>
+                <td>GGC A-214</td>
+                <td>Naria Andeelab </td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Introduction to Basic Teaching of Quran</td>
+                <td>Fri</td>
+                <td>noon - 2:00p</td>
+                <td>GGC A-214</td>
+                <td>Fariha Fatima </td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Software Engineering</td>
+                <td>Tue</td>
+                <td>2:00p - 4:00p</td>
+                <td>GGC B-305</td>
+                <td>Naveera Ahmed</td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Software Engineering</td>
+                <td>Tue</td>
+                <td>10:00a - 11:00a</td>
+                <td>GGC B-302</td>
+                <td>Naveera Ahmed</td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Technical Business Writing</td>
+                <td>Thu</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC A-211</td>
+                <td>Farhana Siddiqi</td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Data Structures and Algorithm (Lab)</td>
+                <td>Fri</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC B-209</td>
+                <td>Fareeha Ashraf</td>
+            </tr>
+            <tr data-course="CS-3">
+                <td>CS-3 Computer Organization and Assembly Language (Lab)</td>
+                <td>Wed</td>
+                <td>noon - 3:00p</td>
+                <td>GGC B-213</td>
+                <td>Fareeha Ashraf</td>
+            </tr>
+
+            <!-- CS-4 Classes -->
+            <tr data-course="CS-4">
+                <td>CS-4 Database System</td>
+                <td>Wed</td>
+                <td>1:00p - 3:00p</td>
+                <td>GGC A-001</td>
+                <td>Naira Andeelab</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Database System</td>
+                <td>Mon</td>
+                <td>10:00a - 11:00a</td>
+                <td>GGC A-205</td>
+                <td>Naira Andeelab</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Design Analysis and Algorithm</td>
+                <td>Fri</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC A-209</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Design Analysis and Algorithm</td>
+                <td>Wed</td>
+                <td>3:00p - 4:00p</td>
+                <td>GGC A-004</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Theory of Automata</td>
+                <td>Tue</td>
+                <td>1:30p - 3:30p</td>
+                <td>GGC A-015</td>
+                <td>Tehreem Tajammal</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Theory of Automata</td>
+                <td>Wed</td>
+                <td>8:00a - 9:00a</td>
+                <td>GGC A-005</td>
+                <td>Tehreem Tajammal</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Probability and Stats</td>
+                <td>Tue</td>
+                <td>10:00a - noon</td>
+                <td>GGC A-013</td>
+                <td>Hajra Murtaza</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Introduction to Basic teaching of Quran</td>
+                <td>Mon</td>
+                <td>noon - 2:00p</td>
+                <td>GGC B-203</td>
+                <td>Fariha Fatima</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Database System (Lab)</td>
+                <td>Thu</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-209</td>
+                <td>Nayab Khalid</td>
+            </tr>
+            <tr data-course="CS-4">
+                <td>CS-4 Software Engineering</td>
+                <td>Fri</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-019</td>
+                <td>Naveera Admed</td>
+            </tr>
+
+            <!-- CS-5 Classes -->
+            <tr data-course="CS-5">
+                <td>CS-5 Introduction to Hadith & Seerah</td>
+                <td>Wed</td>
+                <td>10:00p - noon</td>
+                <td>GGC A-006</td>
+                <td>Dr Zia ul Haq</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Web Programming</td>
+                <td>Tue</td>
+                <td>1:00p - 3:00p</td>
+                <td>GGC B-111</td>
+                <td>Habiba Khatoon</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Web Programming</td>
+                <td>Mon</td>
+                <td>11:00a - noon</td>
+                <td>GGC B-203</td>
+                <td>Habiba Khatoon</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Operating System</td>
+                <td>Fri</td>
+                <td>2:00p - 4:00p</td>
+                <td>GGC A-214</td>
+                <td>Tehreem Tajammal</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Operating System</td>
+                <td>Thu</td>
+                <td>3:00p - 4:00p</td>
+                <td>GGC A-013</td>
+                <td>Tehreem Tajammal</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Compiler Construction</td>
+                <td>Thu</td>
+                <td>10:00a - noon</td>
+                <td>GGC B-011</td>
+                <td>Anum Aleem</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Compiler Construction</td>
+                <td>Wed</td>
+                <td>2:50p - 3:50p</td>
+                <td>GGC B-304</td>
+                <td>Anum Aleem</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Differential Equation</td>
+                <td>Mon</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC B-205</td>
+                <td>Tashfeen Zahra</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Machine Learning</td>
+                <td>Mon</td>
+                <td>2:00p - 4:00p</td>
+                <td>GGC B-310</td>
+                <td>Hajra Murtaza</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Machine Learning</td>
+                <td>Wed</td>
+                <td>9:00a - 10:00a</td>
+                <td>GGC B-004</td>
+                <td>Hajra Murtaza</td>
+            </tr>
+            <tr data-course="CS-5">
+                <td>CS-5 Operating System (Lab)</td>
+                <td>Tue</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC B-209</td>
+                <td>Kousar</td>
+            </tr>
+
+            <!-- CS-6 Classes -->
+            <tr data-course="CS-6">
+                <td>CS-6 Numerical Computing</td>
+                <td>Wed</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC A-013</td>
+                <td>Iqra Ishaque</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Mobile Application Development</td>
+                <td>Thu</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC A-110</td>
+                <td>Aatiqa Bint e Ghazali</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Mobile Application Development</td>
+                <td>Thu</td>
+                <td>10:00a - noon</td>
+                <td>GGC A-202</td>
+                <td>Aatiqa Bint e Ghazali</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Computer network</td>
+                <td>Tue</td>
+                <td>11:00a - 1:00p</td>
+                <td>GGC A-115</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Computer network</td>
+                <td>Mon</td>
+                <td>10:00a - 11:00a</td>
+                <td>GGC A-206</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Advance Computing Programming</td>
+                <td>Mon</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC B-206</td>
+                <td>Elma Afsar</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Advance Computing Programming</td>
+                <td>Thu</td>
+                <td>2:00p - 3:00p</td>
+                <td>GGC A-213</td>
+                <td>Elma Afsar</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Artificial Intelligence</td>
+                <td>Fri</td>
+                <td>11:00a - 1:00p</td>
+                <td>GGC B-303</td>
+                <td>Aatiqa Bint e Ghazali</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Artificial Intelligence</td>
+                <td>Wed</td>
+                <td>1:50p - 2:50p</td>
+                <td>GGC B-304</td>
+                <td>Aatiqa Bint e Ghazali</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Computer network (Lab)</td>
+                <td>Mon</td>
+                <td>11:00a - 2:00p</td>
+                <td>GGC A-212</td>
+                <td>Hafsah Mahmood</td>
+            </tr>
+            <tr data-course="CS-6">
+                <td>CS-6 Artifical Intelligence (Lab)</td>
+                <td>Tue</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-212</td>
+                <td>New Faculty</td>
+            </tr>
+
+            <!-- CS-7 Classes -->
+            <tr data-course="CS-7">
+                <td>CS-7 Technical Business writing</td>
+                <td>Thu</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC A-211</td>
+                <td>Farhana Siddiqi</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Parallel and Distributed Computing</td>
+                <td>Mon</td>
+                <td>10:30a - 12:30p</td>
+                <td>GGC A-214</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Parallel and Distributed Computing</td>
+                <td>Tue</td>
+                <td>1:50a - 2:50p</td>
+                <td>GGC A-008</td>
+                <td>New Faculty</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Information and Security</td>
+                <td>Thu</td>
+                <td>2:00p - 4:00p</td>
+                <td>GGC B-303</td>
+                <td>Sumera Saleem</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Information and Security</td>
+                <td>Wed</td>
+                <td>11:00a - noon</td>
+                <td>GGC B-306</td>
+                <td>Sumera Saleem</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Digital Image Processing</td>
+                <td>Wed</td>
+                <td>8:30a - 10:30</td>
+                <td>GGC A-015</td>
+                <td>Tahira Nazir</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Digital Image Processing</td>
+                <td>Thu</td>
+                <td>noon - 1:00p</td>
+                <td>GGC B-112</td>
+                <td>Tahira Nazir</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Family Life in 21st Century</td>
+                <td>Tue</td>
+                <td>1:00p - 4:00p</td>
+                <td>GGC A-114</td>
+                <td>Sadia Akhtar</td>
+            </tr>
+            <tr data-course="CS-7">
+                <td>CS-7 Final Year Project I</td>
+                <td>Fri</td>
+                <td>1:00p - 4:00p</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <!-- CS-8 Classes -->
+            <tr data-course="CS-8">
+                <td>CS-8 Principles of Digital Marketing</td>
+                <td>Thu</td>
+                <td>1:30p - 3:30p</td>
+                <td>GGC A-015</td>
+                <td>Fatima Nazir</td>
+            </tr>
+            <tr data-course="CS-8">
+                <td>CS-8 Principles of Digital Marketing</td>
+                <td>Tue</td>
+                <td>noon - 1:00p</td>
+                <td>GGC A-005</td>
+                <td>Fatima Nazir</td>
+            </tr>
+            <tr data-course="CS-8">
+                <td>CS-8 Graph Theory</td>
+                <td>Mon</td>
+                <td>8:00a - 11:00a</td>
+                <td>GGC B-303</td>
+                <td>Abdul Rahim</td>
+            </tr>
+            <tr data-course="CS-8">
+                <td>CS-8 Professional Practice</td>
+                <td>Mon</td>
+                <td>8:00a - 10:00a</td>
+                <td>GGC A-115</td>
+                <td>Elma Afsar</td>
+            </tr>
+            <tr data-course="CS-8">
+                <td>CS-8 Professional Practice</td>
+                <td>Mon</td>
+                <td>8:00a - 9:00a</td>
+                <td>GGC A-005</td>
+                <td>Elma Afsar</td>
+            </tr>
+            <td>CS-8 Graph Theory</td>
+            <td>Fri</td>
+            <td>11:00a - 2:00a</td>
+            <td>GGC B-111</td>
+            <td>Abdul Rahim</td>
+            </tr>
+
+            <!-- Add more rows here if necessary based on your provided data -->
+        </tbody>
+    </table>
+
+
+
+
+<div class="button-container">
+    <button class="download-btn" onclick="downloadTimetable()">Download Timetable</button>
+</div>
+
+
+</body>
+</html>

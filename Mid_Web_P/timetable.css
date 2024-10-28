@@ -1,0 +1,590 @@
+/* Global Reset and Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1E2B47; /* Dark navy background */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #FFC107; /* Yellow for headings */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #16233C; /* Darker navy */
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #FFC107; /* Yellow */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #FFC107; /* Yellow on hover */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #16233C;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.search-icon {
+  color: #FFC107;
+  font-size: 20px;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 40px;
+}
+
+.content-left {
+  max-width: 50%;
+}
+
+.content-left h1 {
+  font-size: 48px;
+  color: #FFC107; /* Yellow */
+  margin-bottom: 20px;
+}
+
+.content-left h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.content-left p {
+  color: #B0B0B0;
+  margin-bottom: 30px;
+}
+
+
+/* Newsletter Form */
+.newsletter-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #F2F2F2;
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #FFC107;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #1E2B47;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e0a800;
+}
+
+/* Right Content Image */
+.content-right img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 50px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+  .content-left {
+    max-width: 100%;
+    text-align: center;
+  }
+  .content-right img {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+  }
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #FFC107; /* Yellow */
+}
+
+.dashboard-header p {
+  color: #B0B0B0;
+  font-size: 1.1rem;
+}
+
+/* Card Container */
+.card-container, .container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .card-container, .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Card Styles */
+.card {
+  background-color: #16233C;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 250px; /* Increased height for more visibility */
+  object-fit: cover;
+  border-bottom: 5px solid #FFC107; /* Add yellow border to emphasize images */
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.7rem;
+  color: #FFC107; /* Yellow */
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #B0B0B0;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.card-content a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFC107;
+  font-weight: bold;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Centering the View card */
+.card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 50px auto; /* Center align with margin auto */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #002b53; /* Dark blue color for headings */
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+/* Select Container */
+.select-container {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #FFC107; /* Yellow */
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #16233C;
+  color: white;
+  width: 150px;
+  cursor: pointer;
+}
+
+select:hover {
+  background-color: #1E2B47;
+}
+
+/* Button styling */
+button {
+  background-color: #ffc107; /* Yellow button color */
+  color: #002b53; /* Dark blue text */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0a800; /* Slightly darker yellow on hover */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #16233C;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid #B0B0B0;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #FFC107;
+  color: #1E2B47;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1E2B47;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #16233C;
+}
+
+tbody tr.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #16233C;
+  color: #FFC107;
+  text-align: center;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+/* Login Buttons */
+.staff-btn, .student-btn {
+  background-color: #FFC107;
+  color: #1E2B47;
+  padding: 15px 40px;
+  font-size: 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.staff-btn:hover, .student-btn:hover {
+  background-color: #e0a800;
+}
+
+
+/* Download Button Styles */
+.download-btn {
+  background-color: #FFC107; /* Yellow background */
+  color: #1E2B47; /* Dark navy text color */
+  padding: 15px 40px; /* Padding for top/bottom and left/right */
+  font-size: 22px; /* Font size */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-bottom: 20px; /* Space below the button */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.download-btn:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+
+
+/* Common Button Styles */
+.button-common {
+  padding: 10px 20px;
+  font-size: 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+/* Save Timetable Button Styles */
+.save-timetable-btn {
+  background-color: #FFD700; /* Yellow background */
+  color: black; /* Black text */
+  width: 100%; /* Full width within container */
+  padding: 12px 0; /* Height control - top and bottom padding */
+  font-size: 18px; /* Adjust font size for better readability */
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-timetable-btn:hover {
+  background-color: #FFC107; /* Slightly darker yellow on hover */
+}
+
+
+/* Basic styling for the Add Timetable Form */
+#add-timetable-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+#add-timetable-form h3 {
+  color: #333;
+  text-align: center;
+}
+
+#add-timetable-form label {
+  display: block;
+  margin-top: 10px;
+  color: #555;
+}
+
+#add-timetable-form input { 
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for the Save Timetable button */
+#add-timetable-form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #FFD700; /* Yellow background */
+  color: black; /* Black text */
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#add-timetable-form button:hover {
+  background-color: #FFC107; /* Darker yellow on hover */
+}
+
+
+#timetableDisplay {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+
+
+/* About Us Section */
+.about-us {
+  padding: 40px 20px;
+  background-color: #1E2B47; /* Matching background color */
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+.about-us-content {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between text and image */
+}
+
+.about-us-text {
+  flex: 1; /* Allow text to take available space */
+  margin-right: 20px; /* Space between text and image */
+}
+
+.about-us h2 {
+  font-size: 36px;
+  color: #FFC107; /* Yellow */
+  text-align: left; /* Align heading to the left */
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  color: #B0B0B0; /* Light gray for text */
+  line-height: 1.5;
+  margin-bottom: 15px; /* Space between paragraphs */
+  text-align: left; /* Align text to the left */
+}
+
+.about-us-image {
+  flex: 0 0 300px; /* Set a fixed width for the image container */
+}
+
+.about-us-image img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Slight rounding for a polished look */
+}
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px; /* Smaller width */
+  margin: 0 auto;
+  padding: 1rem; /* Reduced padding */
+  border: 1px solid #22223b;
+  border-radius: 10px;
+  background-color: #22223b; /* Dark background for theme consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Labels */
+form label {
+  font-size: 1rem;
+  margin-bottom: 0; /* Remove gap below labels */
+  color: #ffc107; /* Bold yellow for labels */
+}
+
+/* Form Inputs and Textarea */
+form input,
+form textarea {
+  font-size: 1rem;
+  padding: 0.6rem; /* Reduced padding */
+  border: 1px solid #555; /* Darker border for theme */
+  margin: 0; /* Remove all margins */
+  border-radius: 5px;
+  background-color: #f0f0f0; /* Darker background for inputs */
+  color: #22223b; /* Light text color */
+}
+
+/* Submit Button */
+form input[type="submit"] {
+  background-color: #ffc107; /* Bold yellow for button */
+  color: #22223b;
+  border: none;
+  padding: 0.6rem 1rem; /* Reduced padding */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2rem; /* Slightly smaller font size */
+  border-radius: 5px;
+  margin-top: 0.5rem; /* Add a little space above the button for separation */
+}
+
+form input[type="submit"]:hover {
+  background-color: #ffca2c; /* Lighter yellow on hover */
+}
+

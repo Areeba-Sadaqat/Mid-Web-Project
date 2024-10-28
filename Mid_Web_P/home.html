@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Management</title>
+    <link rel="stylesheet" href="timetable.css"> <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome icons -->
+</head>
+<body>
+    <header>
+        <h1>BSCS Timetable Management</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#view-timetable">View Timetable</a>
+            <a href="#manage-timetable">Manage Timetable</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Section for students to view the timetable -->
+    <section id="view-timetable">
+        <h2>View Timetable</h2>
+        <label for="semester-select">Select Semester:</label>
+        <select id="semester-select">
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
+            <option value="7">Semester 7</option>
+            <option value="8">Semester 8</option>
+        </select>
+        <button onclick="loadTimetable()">View Timetable</button>
+        
+        <table id="timetable-table">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Time</th>
+                    <th>Day</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Timetable entries will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section for staff to manage the timetable -->
+    <section id="manage-timetable">
+        <h2>Manage Timetable</h2>
+        <form id="timetable-form" action="add_timetable.php" method="POST">
+            <label for="semester">Semester:</label>
+            <select id="semester" name="semester" required>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+                <option value="4">Semester 4</option>
+                <option value="5">Semester 5</option>
+                <option value="6">Semester 6</option>
+                <option value="7">Semester 7</option>
+                <option value="8">Semester 8</option>
+            </select>
+
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="day">Day:</label>
+            <select id="day" name="day" required>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+            </select>
+
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue" required>
+
+            <button type="submit">Add/Update Timetable</button>
+        </form>
+    </section>
+
+    <script src="timetable.js"></script> <!-- Link to external JavaScript for interactivity -->
+</body>
+</html>
